@@ -6,6 +6,25 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>
+			Bem vindo ao <%= title %>
+		</p>
+		<p>
+			<i>Tabela de recursos REST disponíves no momento.</i>
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<td>Recurso</td>
+					<td>Descrição</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="/users"><code>/users</code></a></td>
+					<td>Retorna uma lista completa de usuários cadastrados.</td>
+				</tr>
+			</tbody>
+		</table>
   </body>
 </html>
