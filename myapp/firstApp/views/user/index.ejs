@@ -1,0 +1,30 @@
+<script>
+function del(id) {
+	if (id <= 0) {
+		return;
+	}
+	
+	if (confirm('Deseja realmente excluir?')) {
+		window.location = '/user/' + id + '/remove';
+	} 
+}
+</script>
+<table>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>Id</td>
+		<td>Nome</td>
+		<td>CPF</td>
+	</tr>
+<%
+	for (var index in users) {%>
+		<tr>
+			<td><a href="/user/<%=users[index].id%>/edit">editar</a></td>
+			<td><a href="javascript:void(0)" onclick="del(<%=users[index].id%>)">excluir</td>
+			<td><%=users[index].id%></td>
+			<td><%=users[index].name%></td>
+			<td><%=users[index].cpf%></td>
+		</tr>	
+<%}%>
+</table>

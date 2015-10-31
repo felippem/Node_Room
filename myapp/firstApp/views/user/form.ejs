@@ -1,0 +1,20 @@
+<form id="frmCad" action="<%= url%>" method="post">
+	<fieldset>
+		<legend>Cadastro</legend>
+		<label>Nome*</label>
+		<input name="name" type="text" value="<%= name%>" maxlength="45" required />
+		<label>Cpf*</label>
+		<input name="cpf" type="text" value="<%= cpf%>" maxlength="11" required />
+		<label>Cargo</label>
+		<select name="occupationId">
+			<option value="">-- Selecione --</option>
+			<%
+				for (var index in occupations) {%>
+					<option value="<%=occupations[index].id%>" <%if (occupationId === occupations[index].id) {%> selected <%}%>><%=occupations[index].name%></option>
+			<%}%>
+		</select>
+		<input name="id" type="hidden" value="<%= id%>" />
+		
+		<input type="submit" value="Enviar" title="Enviar" />
+	</fieldset>
+</form>

@@ -1,0 +1,28 @@
+<script>
+function del(id) {
+	if (!id || id <= 0) {
+		return;
+	}
+	
+	if (confirm('Deseja realmente excluir?')) {
+		window.location = '/occupation/' + id + '/remove';
+	} 
+}
+</script>
+<table>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>Id</td>
+		<td>Nome</td>
+	</tr>
+<%
+	for (var index in occupations) {%>
+		<tr>
+			<td><a href="/occupation/<%=occupations[index].id%>/edit">editar</a></td>
+			<td><a href="javascript:void(0)" onclick="del(<%=occupations[index].id%>)">excluir</td>
+			<td><%=occupations[index].id%></td>
+			<td><%=occupations[index].name%></td>
+		</tr>	
+<%}%>
+</table>
