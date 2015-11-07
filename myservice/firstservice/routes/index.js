@@ -1,6 +1,6 @@
 /*global require, module*/
 var express = require('express'),
-	usersController = require('../controller/users');
+	usersController = require('../controllers/users');
 
 var router = express.Router();
 
