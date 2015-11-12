@@ -45,19 +45,11 @@ User.list = function (callback) {
 User.get = function (id, callback) {
 	'use strict';
 	
-	if (!id || id <= 0) {
-		return;
-	}
-	
-	db.exex('select * from users where id = '.concat(id), callback);
+	db.exec('select * from users where id = '.concat(id), callback);
 };
 
 User.remove = function (id, callback) {
 	'use strict';
-	
-	if (!id || id <= 0) {
-		return;
-	}
 	
 	db.exec('delete from users where id = '.concat(id), callback);
 };

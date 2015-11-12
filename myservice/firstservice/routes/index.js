@@ -7,9 +7,10 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
   'use strict';
 	
-	res.render('index', { title: 'firstService RESTApi' });
+	res.render('index', { title: 'firstService REST' });
 });
 
-router.get('/users', usersController.index);
+router.get('/users', usersController.users);
+router.get('/user/:id', usersController.user);
 
 module.exports = router;

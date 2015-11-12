@@ -35,19 +35,11 @@ Occupation.list = function (callback) {
 Occupation.get = function (id, callback) {
 	'use strict';
 	
-	if (!id || id <= 0) {
-		return;
-	}
-	
 	db.exec('select * from occupation where id = '.concat(id), callback);
 };
 
 Occupation.remove = function (id, callback) {
 	'use strict';
-	
-	if (!id || id <= 0) {
-		return;
-	}
 	
 	db.exec('delete from occupation where id = '.concat(id), callback);
 };
