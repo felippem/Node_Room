@@ -9,14 +9,6 @@ var User = function () {
 	this.cpf = null;
 	this.occupation = {};
 	
-	this.isValid = function () {
-		if (!this.name || !this.cpf) {
-			return false;
-		}
-		
-		return true;
-	};
-	
 	this.save = function (user, callback) {
 		User.save(user, callback);
 	};

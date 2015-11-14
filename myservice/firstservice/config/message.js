@@ -1,10 +1,14 @@
 /*global require, module*/
 var message = {
-	status: function (code, text) {
+	status: function (code, text, res) {
 		'use strict';
 		
+		if (res) {
+			res.status(code);
+		}
+		
 		return {
-			status_code: code,
+			status: code,
 			message: text
 		};
 	}
