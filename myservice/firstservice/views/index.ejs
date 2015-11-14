@@ -12,64 +12,125 @@
 		<p>
 			<i>Tabela de recursos REST disponíves no momento.</i>
 		</p>
-		<table>
-			<thead>
-				<tr>
-					<td>Recurso</td>
-					<td>Método</td>
-					<td>Corpo</td>
-					<td>Descrição</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><a href="/users"><code>/users</code></a></td>
-					<td>GET</td>
-					<td>--</td>
-					<td>Retorna uma lista completa de usuários cadastrados.</td>
-				</tr>
-				<tr>
-					<td><code>/user/:id</code></td>
-					<td>GET</td>
-					<td>--</td>
-					<td>Retorna um determinado usuário de acordo com o parâmetro <code>:id</code>.</td>
-				</tr>
-				<tr>
-					<td><code>/user/create</code></td>
-					<td>PUT</td>
-					<td>
-						<code>
-							{
-								"name": "full name",
-								"cpf": "11122233344",
-								"occupationId": 1
-							}
-						</code>
-					</td>
-					<td>Cria um novo usuário.</td>
-				</tr>
-				<tr>
-					<td><code>/user/update</code></td>
-					<td>POST</td>
-					<td>
-						<code>
-							{
-								"id": 1,
-								"name": "full name",
-								"cpf": "11122233344",
-								"occupationId": 1
-							}
-						</code>
-					</td>
-					<td>Atualiza as informações de um determinado usuário.</td>
-				</tr>
-				<tr>
-					<td><code>/user/:id/remove</code></td>
-					<td>DELETE</td>
-					<td>--</td>
-					<td>Exclui um determinao usuário de acordo com o parâmetro <code>:id</code>.</td>
-				</tr>
-			</tbody>
-		</table>
+		<section>
+			<h2>User</h2>
+			<table>
+				<thead>
+					<tr>
+						<td>Recurso</td>
+						<td>Método</td>
+						<td>Corpo</td>
+						<td>Descrição</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="/users"><code>/users</code></a></td>
+						<td>GET</td>
+						<td>--</td>
+						<td>Retorna uma lista completa de usuários cadastrados.</td>
+					</tr>
+					<tr>
+						<td><code>/user/:id</code></td>
+						<td>GET</td>
+						<td>--</td>
+						<td>Retorna um determinado usuário de acordo com o parâmetro <code>:id</code>.</td>
+					</tr>
+					<tr>
+						<td><code>/user/create</code></td>
+						<td>PUT</td>
+						<td>
+							<code>
+								{
+									"name": "full name",
+									"cpf": "11122233344",
+									"occupationId": 1
+								}
+							</code>
+						</td>
+						<td>Cria um novo usuário.</td>
+					</tr>
+					<tr>
+						<td><code>/user/update</code></td>
+						<td>POST</td>
+						<td>
+							<code>
+								{
+									"id": 1,
+									"name": "full name",
+									"cpf": "11122233344",
+									"occupationId": 1
+								}
+							</code>
+						</td>
+						<td>Atualiza as informações de um determinado usuário.</td>
+					</tr>
+					<tr>
+						<td><code>/user/:id/remove</code></td>
+						<td>DELETE</td>
+						<td>--</td>
+						<td>Exclui um determinado usuário de acordo com o parâmetro <code>:id</code>.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<h2>Occupation</h2>
+			<table>
+				<thead>
+					<tr>
+						<td>Recurso</td>
+						<td>Método</td>
+						<td>Corpo</td>
+						<td>Descrição</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="/occupations"><code>/occupations</code></a></td>
+						<td>GET</td>
+						<td>--</td>
+						<td>Retorna uma lista completa de ocupações cadastradas.</td>
+					</tr>
+					<tr>
+						<td><code>/occupation/:id</code></td>
+						<td>GET</td>
+						<td>--</td>
+						<td>Retorna uma determinada ocupação de acordo com o parâmetro <code>:id</code>.</td>
+					</tr>
+					<tr>
+						<td><code>/occupation/create</code></td>
+						<td>PUT</td>
+						<td>
+							<code>
+								{
+									"name": "full name"
+								}
+							</code>
+						</td>
+						<td>Cria uma nova ocupação.</td>
+					</tr>
+					<tr>
+						<td><code>/occupation/update</code></td>
+						<td>POST</td>
+						<td>
+							<code>
+								{
+									"id": 1,
+									"name": "full name"
+								}
+							</code>
+						</td>
+						<td>Atualiza as informações de uma determinada ocupação.</td>
+					</tr>
+					<tr>
+						<td><code>/occupation/:id/remove</code></td>
+						<td>DELETE</td>
+						<td>--</td>
+						<td>Exclui uma determinada ocupação de acordo com o parâmetro <code>:id</code>.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
   </body>
 </html>

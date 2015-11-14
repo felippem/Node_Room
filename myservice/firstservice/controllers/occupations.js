@@ -1,13 +1,12 @@
 /*global require, module, console*/
-var User = require('../models/user'),
-	Occupation = require('../models/occupation'),
+var Occupation = require('../models/occupation'),
 	Message = require('../config/message');
 
-var usersController = {
+var occupationsController = {
 	list: function (req, res, next) {
 		'use strict';
 		
-		User.list(function (rows, err) {
+		Occupation.list(function (rows, err) {
 			if (!err) {
 				res.send(rows);
 			} else {
@@ -25,7 +24,7 @@ var usersController = {
 			return;
 		}
 		
-		User.get(id, function (rows, err) {
+		Occupation.get(id, function (rows, err) {
 			if (!err) {
 				res.send(rows);
 			} else {
@@ -43,7 +42,7 @@ var usersController = {
 			return;
 		}
 		
-		User.remove(id, function (rows, err) {
+		Occupation.remove(id, function (rows, err) {
 			if (!err) {
 				res.send(Message.status(202, 'Sucesso', res));
 			} else {
@@ -54,12 +53,10 @@ var usersController = {
 	create: function (req, res, next) {
 		'use strict';
 		
-		var user = new User();
-		user.name = req.body.name;
-		user.cpf = req.body.cpf;
-		user.occupation = new Occupation(req.body.occupationId);
+		var occupation = new Occupation();
+		occupation.name = req.body.name;
 
-		user.save(user, function (rows, err) {
+		occupation.save(occupation, function (rows, err) {
 			if (!err) {
 				res.send(Message.status(201, 'Sucesso', res));
 			} else {
@@ -70,14 +67,12 @@ var usersController = {
 	update: function (req, res, next) {
 		'use strict';
 		
-		var user = {
+		var occupation = {
 			id: req.body.id,
-			name: req.body.name,
-			cpf: req.body.cpf,
-			occupation: new Occupation(req.body.occupationId)
+			name: req.body.name
 		};
 		
-		User.save(user, function (rows, err) {
+		Occupation.save(occupation, function (rows, err) {
 			if (!err) {
 				res.send(Message.status(200, 'Sucesso', res));
 			} else {
@@ -87,4 +82,4 @@ var usersController = {
 	}
 };
 
-module.exports = usersController;
+module.exports = occupationsController;

@@ -35,13 +35,13 @@ Occupation.list = function (callback) {
 Occupation.get = function (id, callback) {
 	'use strict';
 	
-	db.exec('select * from occupation where id = '.concat(id), callback);
+	db.exec('select * from occupations where id = '.concat(id), callback);
 };
 
 Occupation.remove = function (id, callback) {
 	'use strict';
 	
-	db.exec('delete from occupation where id = '.concat(id), callback);
+	db.exec('delete from occupations where id = '.concat(id), callback);
 };
 
 module.exports = Occupation;

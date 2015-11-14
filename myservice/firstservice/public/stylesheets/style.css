@@ -16,6 +16,12 @@ table thead tr {
 
 table tbody tr { background-color: rgb(242, 242, 191); }
 
+table tbody tr:hover { background-color: rgb(229, 229, 172); }
+
 code {
+	display: inline-block;
+	padding: 2px 4px;
 	font-weight: bold;
+	border: solid 1px rgb(122, 122, 122);
+	background-color: rgb(255, 255, 255);
 }
