@@ -171,12 +171,12 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1448036610743,
+			"time": 1448327747299,
 			"name": "User update",
 			"description": "",
 			"collectionId": "fb676d89-cc08-f992-60dd-519fa6f8a504",
 			"responses": [],
-			"rawModeData": "{\r\n    \"id\": 15,\r\n    \"name\": \"Full Name User\",\r\n    \"cpf\": \"55477789863\",\r\n    \"occupationId\": 1\r\n}"
+			"rawModeData": "{\r\n    \"id\": 15,\r\n    \"name\": \"Full Name\",\r\n    \"cpf\": \"55477789863\",\r\n    \"occupation\": { \"id\" : 1 }\r\n}"
 		},
 		{
 			"id": "b3f00c18-f3d1-ed21-2d41-792bdeedb92b",
@@ -214,12 +214,12 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1448036652839,
+			"time": 1448327266040,
 			"name": "User create",
 			"description": "",
 			"collectionId": "fb676d89-cc08-f992-60dd-519fa6f8a504",
 			"responses": [],
-			"rawModeData": "{\r\n    \"name\": \"Full Name\",\r\n    \"cpf\": \"55477789863\",\r\n    \"occupationId\": 1\r\n}"
+			"rawModeData": "{\r\n    \"name\": \"Full Name\",\r\n    \"cpf\": \"55477789863\",\r\n    \"occupation\": { \"id\": 3 }\r\n}"
 		},
 		{
 			"id": "ce0d190c-43d8-3db4-ce02-21d500331139",

@@ -4,13 +4,14 @@ var db = require('../db/connection');
 
 var User = function () {
 	'use strict';
+	
 	this.id = null;
 	this.name = null;
 	this.cpf = null;
 	this.occupation = {};
 	
-	this.save = function (user, callback) {
-		User.save(user, callback);
+	this.save = function (callback) {
+		User.save(this, callback);
 	};
 };
 
@@ -24,7 +25,7 @@ User.save = function (user, callback) {
 	} else {
 		query = "insert into users (name, cpf, occupationId) values ('" + user.name + "', '" + user.cpf + "', " + (!user.occupation.id ? null : user.occupation.id) + ")";
 	}
-	
+		
 	db.exec(query, callback);
 };
 

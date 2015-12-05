@@ -7,8 +7,8 @@ var Occupation = function (id) {
 	this.id = id;
 	this.name = null;
 	
-	this.save = function (occupation, callback) {
-		Occupation.save(occupation, callback);
+	this.save = function (callback) {
+		Occupation.save(this, callback);
 	};
 };
 

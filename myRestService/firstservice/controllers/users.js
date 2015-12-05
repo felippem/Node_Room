@@ -57,9 +57,9 @@ var usersController = {
 		var user = new User();
 		user.name = req.body.name;
 		user.cpf = req.body.cpf;
-		user.occupation = new Occupation(req.body.occupationId);
+		user.occupation = new Occupation(req.body.occupation.id);
 
-		user.save(user, function (rows, err) {
+		user.save(function (rows, err) {
 			if (!err) {
 				res.send(Message.status(201, 'Sucesso', res));
 			} else {
@@ -74,7 +74,7 @@ var usersController = {
 			id: req.body.id,
 			name: req.body.name,
 			cpf: req.body.cpf,
-			occupation: new Occupation(req.body.occupationId)
+			occupation: new Occupation(req.body.occupation.id)
 		};
 		
 		User.save(user, function (rows, err) {

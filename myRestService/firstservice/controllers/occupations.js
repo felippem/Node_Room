@@ -56,7 +56,7 @@ var occupationsController = {
 		var occupation = new Occupation();
 		occupation.name = req.body.name;
 
-		occupation.save(occupation, function (rows, err) {
+		occupation.save(function (rows, err) {
 			if (!err) {
 				res.send(Message.status(201, 'Sucesso', res));
 			} else {
